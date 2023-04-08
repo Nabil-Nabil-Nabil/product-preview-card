@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+/* 
+    font-family: 'Montserrat', sans-serif; 
+    - Weights: 500, 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+/* 
+    font-family: 'Fraunces', serif;
+    - Weights: 700
+*/
+
+
+* {
+    margin: 0;
+}
+
+:root {
+    
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+body {
+    font-size: 0.875rem;
+    background-color: var(--Cream);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 30rem;
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    margin: 2rem;
+    background-color: lightblue;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, .3);
+}
+
+img {
+    max-width: 100%;
+}
+.desktop-img {
+    display: block;
+    max-width: 15rem;
+}
+.mobile-img {
+    display: none;
+}
+
+@media (max-width: 530px) {
+    .container {
+        flex-direction: column;
+        width: 80%;
+        margin: 3rem;
+    }
+    .desktop-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+    }
+}
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        width: 19rem;
+    }
+    .desktop-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+    }
+}
+.content {
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--White);
+    font-family: 'Montserrat', sans-serif; 
+}
+.info {
+    display: grid;
+    gap: 1rem;
+    /* background-color: lightgray; */
+}
+.price-and-cart {
+    display: grid;
+    gap: 1rem;
+    /* background-color: lightgray; */
+
+}
+
+.Preview {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif; 
+    opacity: .5;
+    font-size: .5rem;
+    font-weight: 700;
+}
+.info > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1.8rem;
+}
+.info > p:last-of-type {
+    font-weight: 500;
+    opacity: .6;
+    line-height: 1.3rem;
+    font-size: 0.7rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+.selling-price {
+    font-size: 1.6rem;
+    font-family: 'Fraunces', serif;
+    color: var(--Dark-cyan);
+    font-weight: 700;
+}
+.old-price {
+    margin-left: 1rem;
+    text-decoration: line-through;
+    opacity: .6;
+    font-size: 0.7rem;
+    
+}
+
+.price-and-cart > button {
+    background-color: var(--Dark-cyan);
+    border: none;
+    font-size: 0.8rem;
+    color: var(--White);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+.price-and-cart > button:hover {
+    background-color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+.price-and-cart button svg {
+    margin-right: 0.5rem;
+}
